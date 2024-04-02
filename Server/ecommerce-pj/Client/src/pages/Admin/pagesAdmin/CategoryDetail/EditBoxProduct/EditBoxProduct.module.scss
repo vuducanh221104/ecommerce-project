@@ -1,0 +1,18 @@
+.index-category {
+    position: relative;
+    & .btn-detele {
+        position: absolute;
+        top: 5px;
+        left: -65px;
+    }
+}
+
+.box-product-image,
+.image-thumb {
+    position: relative;
+    & .button-edit {
+        position: absolute;
+        top: 6px;
+        left: 150px;
+    }
+}

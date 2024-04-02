@@ -1,0 +1,15 @@
+.wrapper {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper-item {
+    position: relative;
+    & .button-edit {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

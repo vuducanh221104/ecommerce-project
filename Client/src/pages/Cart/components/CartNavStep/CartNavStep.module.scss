@@ -1,0 +1,71 @@
+// CART NAV-STEP
+.cart-navstep {
+    display: flex;
+}
+
+.cart-navstep-item {
+    text-align: center;
+    position: relative;
+    color: #ff75a6;
+    &::after {
+        position: absolute;
+        left: calc(50% + 35px);
+        top: 18px;
+        z-index: 1;
+        content: '';
+        display: block;
+        width: calc(100% - 70px);
+        height: 1px;
+        border-top: 3px dashed #ff75a6;
+    }
+    &:last-child::after {
+        border-top: none; /* Hoặc border-top: transparent; */
+    }
+}
+
+.cart-navstep-item.active {
+    color: var(--color-hover);
+    &::after {
+        border-color: var(--color-hover);
+    }
+}
+
+.icon-cart-1 {
+    font-size: 4.6rem;
+    padding-bottom: 10px;
+}
+
+.icon-cart-4 {
+    font-size: 3.9rem;
+    padding-bottom: 10px;
+}
+
+.cart-navstep-description {
+    padding: 0 35px;
+    & .btn-check {
+        font-size: 2rem;
+    }
+    & p {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 17px;
+        display: inline-block; /* Hoặc display: block; */
+        width: 100%; /* Đặt width theo ý muốn */
+    }
+}
+
+.cart-nav-step-title {
+    padding-top: 10px;
+}
+// CART IS A CENTER
+.cart {
+    margin: 1.5rem auto 35px;
+    max-width: 720px;
+}
+
+@media (max-width: 575px) {
+    .cart-navstep-description {
+        padding: 0 !important;
+    }
+}

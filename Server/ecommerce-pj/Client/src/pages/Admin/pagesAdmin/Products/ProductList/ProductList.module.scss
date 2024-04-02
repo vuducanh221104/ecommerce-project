@@ -1,0 +1,9 @@
+.label-edit {
+    margin-top: 20px;
+}
+
+.testInput {
+    & input {
+        color: #000 !important;
+    }
+}

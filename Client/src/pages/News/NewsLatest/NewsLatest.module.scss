@@ -1,0 +1,114 @@
+// NEWS LATEST HAVE
+.news-latest-item {
+    margin-top: 15px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #ddd;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+.news-latest__info {
+    margin-left: 20px;
+    & .news-latest__time {
+        font-size: 1.1rem;
+        font-weight: 500;
+        & .icon-clock-latest {
+            color: var(--color-hover);
+        }
+
+        & span {
+            margin-left: 10px;
+        }
+    }
+}
+.news-latest__name {
+    font-size: 1.4rem;
+}
+
+@media (min-width: 765px) and (max-width: 995px) {
+    .news-latest__images {
+        width: 40%;
+        & img {
+            width: 100% !important;
+        }
+    }
+    .news-latest__info {
+        & .news-latest__time {
+            margin-top: 20px;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+@media (max-width: 765px) {
+    .news-latest__images {
+        width: 35%;
+        & img {
+            width: 100% !important;
+        }
+    }
+    .news-latest__info {
+        & .news-latest__time {
+            margin-top: 20px;
+            font-size: 1.3rem;
+        }
+    }
+}
+// NEWS LATEST HAVE
+.news-latest-item {
+    margin-top: 15px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #ddd;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+.news-latest__info {
+    margin-left: 20px;
+    & .news-latest__time {
+        font-size: 1.1rem;
+        font-weight: 500;
+        & .icon-clock-latest {
+            color: var(--color-hover);
+        }
+
+        & span {
+            margin-left: 10px;
+        }
+    }
+}
+.news-latest__name {
+    font-size: 1.4rem;
+}
+
+@media (min-width: 765px) and (max-width: 995px) {
+    .news-latest__images {
+        width: 40%;
+        & img {
+            width: 100% !important;
+        }
+    }
+    .news-latest__info {
+        & .news-latest__time {
+            margin-top: 20px;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+@media (max-width: 765px) {
+    .news-latest__images {
+        width: 35%;
+        & img {
+            width: 100% !important;
+        }
+    }
+    .news-latest__info {
+        & .news-latest__time {
+            margin-top: 20px;
+            font-size: 1.3rem;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.message-text {
+    &.black-text {
+        color: black;
+    }
+
+    /* Màu đỏ */
+    &.red-text {
+        color: red;
+    }
+}
+.text-link {
+    color: inherit !important;
+    font-weight: 700;
+    text-decoration: underline !important;
+}

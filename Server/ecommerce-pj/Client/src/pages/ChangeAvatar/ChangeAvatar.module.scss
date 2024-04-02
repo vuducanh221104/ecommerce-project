@@ -1,0 +1,96 @@
+.wrapper {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    margin: 6.5rem auto 170px;
+    max-width: 520px;
+    padding: 0 15px;
+}
+
+.user {
+    position: relative;
+    background-color: #fff;
+    padding: 22px 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px 0 srgba(0, 0, 0, 0.14);
+    min-height: 320px;
+}
+
+.change-avatar {
+    & h3 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--color-hover);
+    }
+    & input {
+        display: flex;
+        margin: auto;
+        padding-top: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+.text-success {
+    color: var(--color-hover);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-submit {
+    width: 100%;
+    height: 45px;
+    margin-top: 70px;
+    border-radius: 10px;
+    background-color: var(--color-hover);
+    color: #fff;
+    font-size: 1.6rem;
+    &.disabled {
+        opacity: 0.8;
+        cursor: not-allowed;
+    }
+}
+
+.error-message {
+    margin: 0 !important;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 4px !important;
+    color: var(--color-hover);
+}
+
+// Loading
+.loading {
+    text-align: center;
+    font-size: 4rem;
+    background-color: transparent;
+    color: rgba(22, 24, 35, 0.34);
+}
+
+.loading {
+    animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: translateY(-50%) rotate(0);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+.avatar-img {
+    display: flex;
+    margin-top: 20px !important;
+    margin: auto;
+    width: 210px;
+    height: 190px;
+    border-radius: 50%;
+}

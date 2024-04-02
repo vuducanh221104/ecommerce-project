@@ -1,0 +1,19 @@
+.wrapper {
+    padding: 0 15px;
+    overflow-x: auto !important;
+    padding-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.wrapper::-webkit-scrollbar {
+    height: 10px !important;
+}
+
+@media (max-width: 765px) {
+    .wrapper {
+        align-items: start;
+        justify-content: start;
+    }
+}

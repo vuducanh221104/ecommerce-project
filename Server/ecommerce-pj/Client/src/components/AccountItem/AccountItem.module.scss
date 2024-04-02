@@ -1,0 +1,42 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    border: 0.8px solid #ddd;
+    .image-product {
+        width: 50px;
+    }
+    & a {
+        display: block;
+        padding: 11px 13px 10px;
+        line-height: 1.2;
+    }
+    .info {
+        padding: 0 12px 0 8px;
+    }
+
+    .name {
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        &:hover {
+            color: var(--color-hover);
+        }
+    }
+
+    .description {
+        display: flex;
+        color: var(--color-hover);
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    .price-real {
+        margin-left: 5px;
+        color: #000;
+        text-decoration: line-through;
+        font-weight: 400;
+        font-size: 1.35rem;
+    }
+}

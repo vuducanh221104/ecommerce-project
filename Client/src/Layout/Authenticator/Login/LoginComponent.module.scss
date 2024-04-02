@@ -1,0 +1,195 @@
+.wrapper {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    margin: 6.5rem auto 35px;
+    max-width: 520px;
+    padding: 0 15px;
+}
+
+.login {
+    background-color: #fff;
+    padding: 22px 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.14);
+    & .login-title {
+        display: flex;
+        justify-content: center;
+        font-size: 3rem;
+        color: #222222;
+    }
+}
+
+// FORM LOGIn
+.login-content {
+    color: #777;
+    margin-top: 20px;
+    .login-user {
+        border-bottom: 2px solid #ccc;
+        position: relative;
+        transition: 0.3s all ease;
+        & .register-input {
+            display: flex;
+            padding: 5px 0 5px 5px;
+        }
+
+        & .error-message {
+            position: absolute;
+            top: 35px;
+            left: 0;
+        }
+        & .icon-user {
+            font-size: 2.6rem;
+        }
+        & input {
+            padding: 5px 10px 0 9px;
+            width: 100%;
+            font-size: 1.4rem;
+        }
+        &:focus-within {
+            border-color: #000;
+        }
+    }
+    .login-password {
+        border-bottom: 2px solid #ccc;
+        position: relative;
+        transition: 0.3s all ease;
+        margin-top: 30px;
+        & .register-input {
+            display: flex;
+            padding: 5px 0 5px 5px;
+        }
+
+        & .error-message {
+            position: absolute;
+            top: 35px;
+            left: 0;
+        }
+        & .icon-password {
+            font-size: 2.6rem;
+        }
+        & input {
+            padding: 5px 10px 0 9px;
+            width: 100%;
+            font-size: 1.4rem;
+        }
+        &:focus-within {
+            border-color: #000;
+        }
+    }
+}
+// EYE AND EYE-SLASH
+.login-eye {
+    text-align: center;
+    .icon-eye {
+        margin-right: 10px;
+        margin-top: 3px;
+        font-size: 2.2rem;
+    }
+    .icon-eye-slash {
+        margin-right: 10px;
+        margin-top: 3px;
+        font-size: 2.2rem;
+    }
+}
+// LOGIN
+.btn-login {
+    width: 100%;
+    height: 45px;
+    margin-top: 40px;
+    border-radius: 10px;
+    background-color: var(--color-hover);
+    color: #fff;
+    font-size: 1.6rem;
+}
+// LOGIN-FORGET
+.login-forget {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.login-forget-text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.3rem;
+    color: #333;
+    cursor: pointer;
+    &:hover {
+        color: var(--color-hover);
+    }
+}
+
+// SOCIAL
+.group-social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a77f2;
+    border-radius: 5px;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    color: #fff;
+    cursor: pointer;
+    & a {
+        display: flex;
+    }
+    & p {
+        padding-left: 10px;
+        font-size: 1.6rem;
+        padding-top: 3px;
+        margin: 0 !important;
+    }
+    &:nth-child(2) {
+        background-color: #4285f4;
+    }
+}
+.icon-social {
+    font-size: 3rem;
+}
+
+// END
+.login-end {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    & p {
+        font-size: 1.6rem;
+        color: #bdbdbd;
+        & a {
+            color: var(--color-hover);
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.error-message {
+    margin: 0 !important;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 4px !important;
+    color: var(--color-hover);
+}
+
+// / EYE AND EYE-SLASH
+.login-eye {
+    text-align: center;
+    .icon-eye {
+        margin-right: 10px;
+        margin-top: 3px;
+        font-size: 2.2rem;
+    }
+    .icon-eye-slash {
+        margin-right: 10px;
+        margin-top: 3px;
+        font-size: 2.2rem;
+    }
+}
