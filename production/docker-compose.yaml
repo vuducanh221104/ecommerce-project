@@ -24,7 +24,7 @@ services:
             PORT: 4000
             JWT_ACCESS_KEY: ducanh123
             JWT_REFRESH_KEY: ducanh2211
-            BASE_URL_CLIENT: http://localhost
+            BASE_URL_CLIENT: http://18.217.246.135/
             # BASE_URL_SERVER: http://localhost:4000
             DB_URI: mongodb://mongo_db:27017/database_ecommerce
         depends_on:
