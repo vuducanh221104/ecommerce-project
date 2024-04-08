@@ -88,14 +88,7 @@ class NewsController {
         }
     }
 
-    async NewsLimit(req, res, next) {
-        try {
-            const data = await NewsSchema.find({}).limit(6).sort({ createdAt: -1 });
-            res.status(200).json(data);
-        } catch (err) {
-            res.status(500).json({ message: error });
-        }
-    }
+
 }
 
 module.exports = new NewsController();

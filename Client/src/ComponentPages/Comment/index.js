@@ -339,13 +339,24 @@ function NewsComment() {
                     </div>
                 ) : (
                     <div className={cx('blocked-area')}>
-                        <div className={cx('blocked-overlay')}>
-                            <h3> You Must Login</h3>
-                        </div>
-                       
-                                <div className={cx('btn-sumbit')}>
-                                    <button> Submit</button>
-                        </div>
+                         <div className={cx('comment-input-box')}>
+                            <div className={cx('comment-input')}>
+                                <input
+                                    type="text"
+                                    placeholder="Enter Your Comment"
+                                    id="comment"
+                                    name="comment"
+                                    value={formik.values.comment}
+                                    onChange={formik.handleChange}
+                                />
+                            </div>
+                            <div className={cx('blocked-overlay')}>
+                                <h3> Bạn Phải Đăng Nhâp</h3>
+                            </div>
+                                    <div className={cx('btn-sumbit')}>
+                                        <button> Submit</button>
+                                    </div>      
+                         </div>
                     </div>
                 )}
             </form>

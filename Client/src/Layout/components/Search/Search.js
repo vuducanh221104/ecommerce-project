@@ -92,7 +92,7 @@ function Search() {
         >
             <div className={cx('search')}>
                 <input
-                    placeholder="What are you looking for?"
+                    placeholder="Bạn Đang Kiếm Gì?"
                     spellCheck={false}
                     ref={nameRef}
                     onChange={onChangeInput}

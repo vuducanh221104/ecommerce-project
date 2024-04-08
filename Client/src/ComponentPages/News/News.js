@@ -17,7 +17,7 @@ function News() {
 
     useEffect(() => {
         const fetchApi = async () => {
-            const response = await newsLimit();
+            const response = await newsLimit(6);
             try {
                 setData(response);
             } catch (error) {

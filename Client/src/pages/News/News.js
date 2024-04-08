@@ -22,7 +22,7 @@ function News() {
         const fetchApi = async () => {
             const response = await news(visibleCount);
             setData(response);
-            if (response.length < visibleCount) {
+            if (response?.length < visibleCount) {
                 setReachedEnd(true);
             } else {
                 setReachedEnd(false);
@@ -36,21 +36,33 @@ function News() {
         setVisibleCount((prevCount) => prevCount + 5);
     };
 
+    if(!data){
+        return (
+            <div style={{display:'flex',alignItems:'center',justifyContent:"center",padding:'20px'}}>
+
+
+                <h2 className={cx('title')}>Không có bài báo nào !!</h2>
+
+            </div>
+        )
+    }
+
     return (
         <div className={cx('wrapper')}>
             <div className={cx('container')}>
                 <div className={cx('row')}>
                     {/* LEFT */}
-                    <div className={cx('left', 'col-12 col-lg-8')}>
+                    <div className={cx('left', 'col-12 col-lg-8','mt-5')}>
                         <h2 className={cx('title')}>Gần Đây Nhất</h2>
+                        
                         <div className={cx('content')}>
                             <ul className={cx('news-list')}>
-                                {data.map((item, index) => (
+                                {data?.map((item, index) => (
                                     <li className={cx('news-item')} key={item._id}>
                                         <Link to={item.slug} className={cx('row')}>
                                             <div className={cx('news-info', 'col-8')}>
                                                 <h3 className={cx('news-name')}>{item.title}</h3>
-                                                <div className={cx('news-category', 'd-flex alig')}>
+                                                <div className={cx('news-category')}>
                                                     <div className={cx('news-category__types')}>
                                                         <FontAwesomeIcon icon={faTags} className={cx('icon-type')} />
                                                         <span>{item.tags}</span>
@@ -68,7 +80,7 @@ function News() {
                                             </div>
                                             <div className={cx('news-image', 'col-4')}>
                                                 <LazyLoad>
-                                                    <img src={item.cover_image} className={cx('lazyload')} />
+                                                    <img src={item.cover_image} className={cx('lazyload','image')} />
                                                 </LazyLoad>
                                             </div>
                                         </Link>
@@ -95,7 +107,7 @@ function News() {
                         )}
                     </div>
                     {/*  RIGHT*/}
-                    <div className={cx('right', 'col-12 col-lg-4')}>
+                    <div className={cx('right', 'col-12 col-lg-4','mt-5')}>
                         <h2 className={cx('title-right')}>Cộng Đồng Minh Tuấn Mobile</h2>
                         <div className={cx('social', 'd-flex', 'mt-5')}>
                             <div className={cx('social-item-facebook')}>

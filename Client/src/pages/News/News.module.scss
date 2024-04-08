@@ -33,6 +33,7 @@
 }
 
 .news-category {
+    display: flex;
     margin: 12px 0 23px 0;
     .news-category__types {
         background-color: #f1f0f1;
@@ -87,6 +88,10 @@
 }
 
 // IMAGE
+.image{
+    max-width: 190px ;
+    max-height: 107px;
+}
 .news-image {
     & img {
         width: 96.6%;
@@ -124,7 +129,7 @@
     color: #fff;
 }
 
-@media (min-width: 765px) and (max-width: 995px) {
+@media (min-width: 765px) and (max-width: 991px) {
     .wrapper {
         padding: 0 !important;
     }

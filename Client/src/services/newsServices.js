@@ -55,9 +55,9 @@ export const newsLatest = async () => {
 };
 
 // News Footer Limit
-export const newsLimit = async () => {
+export const newsLimit = async (numberLimit) => {
     try {
-        const res = await httpRequest.get(`api/news/limit`);
+        const res = await httpRequest.get(`api/news?limit=${numberLimit}`);
         return res.data;
     } catch (error) {
         console.log(error);

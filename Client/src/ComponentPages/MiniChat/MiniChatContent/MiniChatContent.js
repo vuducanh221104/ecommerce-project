@@ -117,8 +117,11 @@ function MiniChatContent({ showChat, setShowChat, role = 'user', roomName, avata
                 <h3>Chat Với Minh Tuấn Moblie</h3>
                 <FontAwesomeIcon icon={faXmark} className={cx('icon-close')} onClick={() => setShowChat(false)} />
             </div>
+            <div style={{fontSize:'1.2rem' ,paddingTop:'5px'}}>
+            ID room {roomName}
+            </div>
             <div className={cx('message-content')} ref={messageContainerRef}>
-                {roomName}
+                
                 {/* MESSAGE MAP */}
                 <div className={cx('message-block')}>
                     <div className={cx('container-meessage')}>
@@ -135,7 +138,7 @@ function MiniChatContent({ showChat, setShowChat, role = 'user', roomName, avata
                         </div>
                     </div>
                 </div>
-                {messages.map((msg, index) => (
+                {messages?.map((msg, index) => (
                     <div key={index} className={cx('message-block', msg.role === 'user' ? 'user-message' : '')}>
                         <div className={cx('container-meessage')}>
                             <img

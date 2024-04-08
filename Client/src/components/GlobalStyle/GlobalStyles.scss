@@ -67,17 +67,18 @@
 
 html {
     font-size: 62.5%;
-    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 body {
-    overscroll-behavior-y: none;
     font-family: 'SF Pro Display', sans-serif !important;
     font-size: 1.6rem !important;
-    position: relative !important;
     color: RGB(0, 8, 28) !important;
+    overscroll-behavior-y: none;
+    position: relative !important;
     overflow-x: hidden !important;
     width: 100% !important;
+    height: 100%;
     background-color: #fff !important;
     transition: all 0.3s ease !important;
     -moz-transition: all 0.3s ease !important;

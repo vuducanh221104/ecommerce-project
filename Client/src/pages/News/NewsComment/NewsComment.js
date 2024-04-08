@@ -153,7 +153,7 @@ function NewsComment() {
                 ) : (
                     <div className={cx('blocked-area')}>
                         <div className={cx('blocked-overlay')}>
-                            <h3> You Must Login</h3>
+                            <h3> Bạn Phải Đăng Nhập</h3>
                         </div>
                         <div className={cx('comment-input-box')}>
                             <div className={cx('comment-input')}>

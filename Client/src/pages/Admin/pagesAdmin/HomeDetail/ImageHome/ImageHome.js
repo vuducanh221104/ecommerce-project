@@ -4,9 +4,7 @@ import styles from './ImageHome.module.scss';
 import React, { useEffect, useState } from 'react';
 import { Button, Space, Input, Form, message } from 'antd';
 import { DeleteOutlined } from '@ant-design/icons';
-
 import axios from 'axios';
-
 import ModalLoading from '~/pages/Admin/components/ModalLoading';
 import WrapperContainer from '~/pages/Admin/components/WrapperContainer';
 import ImageCustom from '~/pages/Admin/components/ImageCustom';

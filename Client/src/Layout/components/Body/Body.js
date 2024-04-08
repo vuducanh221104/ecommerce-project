@@ -36,7 +36,7 @@ function Body() {
                     <div className={cx('product-info')}>
                         <div className={cx('row')}>
                             {/* COT 1-2*/}
-                            <div className={cx('', 'col-12 col-lg-12 col-xl-9 px-4')}>
+                            <div className={cx('', 'col-12 col-lg-12 col-xl-9 px-4 mt-5')}>
                                 <ProductInfo data={data} />
                             </div>
                             {/* COT 3 */}

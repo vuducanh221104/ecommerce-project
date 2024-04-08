@@ -11,13 +11,14 @@ const ListComment = new Schema({
 
 
 const NewsSchema = new Schema({
+    cover_image:{type:String},
     title: {type:String},
     tags: {type:String},
     content: {type:String},
     description: {type:String},
     author: {type:String},
     comment: [ListComment],
-   slug: {type:String , slug: 'title'}
+    slug: {type:String , slug: 'title' ,unique: true}
 }, {
   timestamps: true,
   collection: 'news'

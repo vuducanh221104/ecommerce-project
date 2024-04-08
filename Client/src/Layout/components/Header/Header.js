@@ -101,9 +101,9 @@ function Header({ login = true }) {
         <>
             <header className={cx('clearfix')}>
                 {/* MiniChat */}
-                <MiniChat />
                 {/* Header */}
                 <div className={cx('header-content')}>
+                <MiniChat />
                     <div className={cx('container', 'px-3')}>
                         <div
                             className={cx('row', 'flex-nowrap', 'align-items-center', 'px-2', 'content-header')}
