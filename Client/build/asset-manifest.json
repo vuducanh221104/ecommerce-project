@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7f60cae5.css",
-    "main.js": "/static/js/main.6dca773f.js",
+    "main.js": "/static/js/main.68403cf5.js",
     "static/js/787.fe00223f.chunk.js": "/static/js/787.fe00223f.chunk.js",
     "static/media/SF-Pro-Display-Semibold.otf": "/static/media/SF-Pro-Display-Semibold.f50e0151c241f0e9d573.otf",
     "static/media/SF-Pro-Display-Medium.otf": "/static/media/SF-Pro-Display-Medium.e1d844da0ee028d4e288.otf",
@@ -51,11 +51,11 @@
     "static/media/laptop-double.webp": "/static/media/laptop-double.f34d8baa3aa1dcadbb24.webp",
     "static/media/macbook.webp": "/static/media/macbook.26140daf4abbf07a7524.webp",
     "main.7f60cae5.css.map": "/static/css/main.7f60cae5.css.map",
-    "main.6dca773f.js.map": "/static/js/main.6dca773f.js.map",
+    "main.68403cf5.js.map": "/static/js/main.68403cf5.js.map",
     "787.fe00223f.chunk.js.map": "/static/js/787.fe00223f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7f60cae5.css",
-    "static/js/main.6dca773f.js"
+    "static/js/main.68403cf5.js"
   ]
 }
