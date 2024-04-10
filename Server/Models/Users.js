@@ -7,7 +7,7 @@ const Users = new Schema({
     email: { type: String, unique: true },
     phone: { type: String },
     password: { type: String },
-    avatar: { type: String },
+    avatar: { type: String, default: null },
     comfirmPassword: { type: String },
     forgotPassToken: { type: String },
     isVerified: { type: Boolean, default: false },

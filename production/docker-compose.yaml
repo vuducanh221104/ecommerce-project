@@ -28,8 +28,8 @@ services:
             JWT_REFRESH_KEY: ducanh2211
             BASE_URL_CLIENT: http://localhost
             # BASE_URL_SERVER: http://localhost:4000
-            DB_URI: mongodb://mongo_db:27018/database_ecommerce
-            # DB_URI: mongodb://mongo_db:27018/database_ecommerce
+            DB_URI: mongodb://mongo_db:27017/database_ecommerce
+
         depends_on:
             - mongo_db
             - redis

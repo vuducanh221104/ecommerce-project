@@ -20,7 +20,16 @@ export const deleteUser = async (listId) => {
 
 export const addUser = async (values) => {
     try {
-        const res = await httpRequest.post(`api/admin/user`, values);
+        const res = await httpRequest.post(`api/admin/user`, 
+           {
+            avatar: values.avatar ? values.avatar : null,
+            fullname:values.fullname,
+            username:values.username,
+            email: values.email,
+            role:values.role,
+            isVerified:true
+           }
+        );
         return res.data;
     } catch (error) {
         console.log(error);

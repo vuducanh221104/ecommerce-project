@@ -3,7 +3,6 @@ import classNames from 'classnames/bind';
 
 import React, { useState, useEffect, useRef } from 'react';
 import socketIOClient from 'socket.io-client';
-import axios from 'axios';
 import { activeRoom } from '../Admin/services/chatServices';
 const host = process.env.REACT_APP_BASE_URL;
 
@@ -83,14 +82,14 @@ function ChatAdmin({ role = 'admin' }) {
 
     return (
         <div>
-            {activeRooms.map((item, index) => (
+            {activeRoom?.map((item, index) => (
                 <h1 onClick={() => handleClickRoom(item)} key={index}>
                     Chat Room: {item}
                 </h1>
             ))}
             <div>
                 <div>
-                    {messages.map((msg, index) => (
+                    {messages?.map((msg, index) => (
                         <div key={index} className={msg.role === 'user' ? 'black-text' : 'red-text'}>
                             {parseMessages(msg.content)}
                         </div>

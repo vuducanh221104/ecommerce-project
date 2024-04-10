@@ -7,6 +7,7 @@ export const loginUser = async (user, dispatch, navigate) => {
         const res = await httpRequest.post('api/user/loginUser', user);
         dispatch(loginSuccess(res.data));
         navigate('/');
+        return res.data
     } catch (error) {
         dispatch(loginFailed());
     }

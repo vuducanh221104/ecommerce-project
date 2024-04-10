@@ -94,3 +94,13 @@
     border-radius: 13px;
     overflow: hidden;
 }
+
+@media (max-width: 991px) {
+    .minichat-social {
+        bottom: 105px;
+        right: 2px;
+    }
+    .minichat {
+        bottom: 52px;
+    }
+}

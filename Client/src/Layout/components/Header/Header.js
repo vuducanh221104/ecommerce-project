@@ -24,6 +24,16 @@ import MiniChat from '~/ComponentPages/MiniChat';
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '~/redux/apiRequest';
 import { logOutSuccess } from '~/redux/authSlice';
+import iconNavMobile from '~/assets/icon-nav-mobile';
+import { ReactComponent as IconHome } from '~/assets/icon-nav-mobile/icon-home-nav-moblie.svg';
+import { ReactComponent as IconStore } from '~/assets/icon-nav-mobile/icon-store.svg';
+import { ReactComponent as IconCart } from '~/assets/icon-nav-mobile/icon-cart-nav-moblie.svg';
+import { ReactComponent as IconCategory } from '~/assets/icon-nav-mobile/icon-category.svg';
+import { ReactComponent as IconDots } from '~/assets/icon-nav-mobile/icon-dots.svg';
+import imagesCateMobile from '~/assets/imagesCategoryMobile';
+import CategoryMobile from '~/ComponentPages/CategoryMobile/CategoryMobile';
+import { useState } from 'react';
+
 const cx = classNames.bind(styles);
 
 function Header({ login = true }) {
@@ -32,7 +42,7 @@ function Header({ login = true }) {
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
+    const [menuOpen, setMenuOpen] = useState(false);
     const MENU_ITEMS = [
         {
             icon: <FontAwesomeIcon icon={faEarthAsia} />,
@@ -99,11 +109,12 @@ function Header({ login = true }) {
 
     return (
         <>
+            {/* MiniChat */}
+            <MiniChat />
+
             <header className={cx('clearfix')}>
-                {/* MiniChat */}
                 {/* Header */}
                 <div className={cx('header-content')}>
-                <MiniChat />
                     <div className={cx('container', 'px-3')}>
                         <div
                             className={cx('row', 'flex-nowrap', 'align-items-center', 'px-2', 'content-header')}
@@ -226,6 +237,56 @@ function Header({ login = true }) {
                 </div>
                 <HeaderNavSub />
             </header>
+
+            {/* NAVBAR MOBLIE */}
+            <div className={cx('navbar-mobile')}>
+                <div className={cx('navbar-mobile-navgroup')}>
+                    <ul className={cx('navbar-mobile-navgroup-list')}>
+                        <li className={cx('navbar-mobile-navgroup-item')}>
+                            <Link to={'/'} className={'navbar-moblie-link'}>
+                                <div className={cx('navbar-moblie-icon')}>
+                                    <IconHome />
+                                </div>
+                                <p className={cx('navbar-mobile-p')}>Trang Chủ</p>
+                            </Link>
+                        </li>
+
+                        <li className={cx('navbar-mobile-navgroup-item')} onClick={() => setMenuOpen(!menuOpen)}>
+                            <div className={'navbar-moblie-link'} style={{ cursor: 'pointer' }}>
+                                <div className={cx('navbar-moblie-icon')}>
+                                    <IconCategory />
+                                </div>
+                                <p className={cx('navbar-mobile-p')}>Danh Mục</p>
+                            </div>
+                        </li>
+                        <li className={cx('navbar-mobile-navgroup-item')}>
+                            <Link to={'/he-thong-cua-hang'} className={'navbar-moblie-link'}>
+                                <div className={cx('navbar-moblie-icon')}>
+                                    <IconStore />
+                                </div>
+                                <p className={cx('navbar-mobile-p')}>Cửa Hàng</p>
+                            </Link>
+                        </li>
+                        <li className={cx('navbar-mobile-navgroup-item')}>
+                            <Link to={'/cart'} className={'navbar-moblie-link'}>
+                                <div className={cx('navbar-moblie-icon')}>
+                                    <IconCart />
+                                </div>
+                                <p className={cx('navbar-mobile-p')}>Giỏ Hàng</p>
+                            </Link>
+                        </li>
+                        <li className={cx('navbar-mobile-navgroup-item')}>
+                            <Link to={'/news'} className={'navbar-moblie-link'}>
+                                <div className={cx('navbar-moblie-icon')} style={{ paddingTop: '10px' }}>
+                                    <IconDots />
+                                </div>
+                                <p className={cx('navbar-mobile-p')}>Xem Thêm</p>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <CategoryMobile openFrist={menuOpen} setMenuOpen={setMenuOpen} />
         </>
     );
 }

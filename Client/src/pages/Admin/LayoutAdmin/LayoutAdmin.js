@@ -191,7 +191,7 @@ const LayoutAdmin = ({ children }) => {
                     </SubMenu>
                     <SubMenu key="sub7" icon={<FolderAddOutlined />} title={<span>News</span>}>
                         <Menu.Item key="13">
-                            <Link to={'/admin/news'}>News List</Link>
+                            <Link to={'/admin/dashboard'}>News List</Link>
                         </Menu.Item>
                     </SubMenu>
 

@@ -6,7 +6,6 @@
     width: 100%;
     min-height: 100vh;
     display: flex;
-    // padding-top: 110px;
     flex-direction: column;
     background-color: #eaeaea;
 }
@@ -25,5 +24,19 @@
 @media (max-width: 530px) {
     .container {
         margin-top: -50px;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 991px) {
+    .content {
+        padding-bottom: 90px;
+        padding-top: 90px;
+    }
+}
+
+@media (min-width: 991px) {
+    .content {
+        padding-bottom: 90px;
+        padding-top: 90px;
     }
 }

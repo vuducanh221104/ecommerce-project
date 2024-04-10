@@ -1,5 +1,5 @@
 .wrapper {
-    padding: 0 15%;
+    padding: 50px 15% 10px 15%;
     margin-bottom: 30px;
 }
 
@@ -60,9 +60,9 @@
     }
 }
 
-@media (min-width: 995px) and (max-width: 1200px) {
+@media (min-width: 995px) {
     .wrapper {
-        padding: 0 9%;
+        padding: 60px 9% 10px 9%;
     }
     .news-latest {
         & img {
@@ -74,16 +74,29 @@
     }
 }
 
-@media (min-width: 766px) and (max-width: 995px) {
+// @media (min-width: 995px) and (max-width: 1200px) {
+//     .wrapper {
+//         padding: 0 9%;
+//     }
+//     .news-latest {
+//         & img {
+//             width: 100% !important;
+//         }
+//         & h3 {
+//             font-size: 1.8rem;
+//         }
+//     }
+// }
+
+@media (min-width: 740px) and (max-width: 995px) {
     .wrapper {
-        padding: 0 40px;
+        padding: 55px 40px 10px 40px;
     }
 }
 
-@media (max-width: 766px) {
+@media (max-width: 740px) {
     .wrapper {
-        margin-top: 20px;
-        padding: 0 5px;
+        padding: 55px 20px 10px 20px;
     }
 }
 

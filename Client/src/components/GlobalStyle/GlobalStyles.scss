@@ -71,11 +71,11 @@ html {
 }
 
 body {
+    position: relative !important;
     font-family: 'SF Pro Display', sans-serif !important;
     font-size: 1.6rem !important;
     color: RGB(0, 8, 28) !important;
     overscroll-behavior-y: none;
-    position: relative !important;
     overflow-x: hidden !important;
     width: 100% !important;
     height: 100%;
@@ -114,13 +114,13 @@ body {
     box-sizing: border-box;
 }
 
-//
 html *::-webkit-scrollbar {
-    border-radius: 0;
-    width: 12px;
+    border-radius: 10px;
+    width: 9px;
 }
+
 html *::-webkit-scrollbar-thumb {
-    border-radius: 4px;
+    border-radius: 15px;
     background-color: #c1c1c1;
 }
 html *::-webkit-scrollbar-track {

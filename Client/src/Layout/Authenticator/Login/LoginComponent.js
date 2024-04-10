@@ -19,6 +19,7 @@ function LoginComponent() {
     const dispatch = useDispatch();
     const inputRef = useRef(null);
     const [showPassword, setShowPassword] = useState(false);
+    const [showError,setShowError] = useState(false);
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
 
@@ -33,7 +34,10 @@ function LoginComponent() {
         },
         onSubmit: async (values) => {
             setLoading(true);
-            await loginUser(values, dispatch, navigate);
+            const dataLogin = await loginUser(values, dispatch, navigate);
+            if(dataLogin===undefined){
+                setShowError(true)
+            }
             setLoading(false);
         },
     });
@@ -103,6 +107,9 @@ function LoginComponent() {
                                             </div>
                                         </div>
                                     </div>
+                                    {showError && 
+                                         <p className={cx('error-message')}>Valid username or password</p>
+                                    }
                                     <button className={cx('btn-login')}>Login</button>
                                     <div className={cx('login-forget')}>
                                         <Link to="/forgotPassword">

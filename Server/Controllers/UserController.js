@@ -360,39 +360,38 @@ class UserController {
                 $or: [{ username: req.body.usernameOrEmail }, { email: req.body.usernameOrEmail }],
             });
             if (!user) {
-                res.status(404).json('Wrong username!');
+                return res.status(404).json('Wrong username!');
             }
             const validPassword = await bcrypt.compare(req.body.password, user.password);
             if (!validPassword) {
-                res.status(404).json('Wrong password');
+                return res.status(404).json('Wrong password');
             }
-            if (user && validPassword) {
-                const accessToken = jwt.sign(
-                    {
-                        _id: user._id,
-                    },
-                    process.env.JWT_ACCESS_KEY,
-                    { expiresIn: '30s' },
-                );
-
-                const refreshToken = jwt.sign(
-                    {
-                        _id: user._id,
-                    },
-                    process.env.JWT_REFRESH_KEY,
-                    { expiresIn: '1d' },
-                );
-                res.cookie('refreshToken', refreshToken, {
-                    httpOnly: true,
-                    secure: false,
-                    path: '/',
-                    sameSite: 'strict',
-                });
-                const { password, ...other } = user._doc;
-                res.status(200).json({ ...other, accessToken });
-            }
+            // Nếu tên người dùng và mật khẩu đều đúng
+            const accessToken = jwt.sign(
+                {
+                    _id: user._id,
+                },
+                process.env.JWT_ACCESS_KEY,
+                { expiresIn: '30s' },
+            );
+    
+            const refreshToken = jwt.sign(
+                {
+                    _id: user._id,
+                },
+                process.env.JWT_REFRESH_KEY,
+                { expiresIn: '1d' },
+            );
+            res.cookie('refreshToken', refreshToken, {
+                httpOnly: true,
+                secure: false,
+                path: '/',
+                sameSite: 'strict',
+            });
+            const { password, ...other } = user._doc;
+            return res.status(200).json({ ...other, accessToken });
         } catch (error) {
-            res.status(500).json(error);
+            return res.status(500).json(error);
         }
     }
     // [POST]

@@ -1,12 +1,6 @@
-.wrapper{
-    padding: 10px;
+.wrapper {
+    padding: 60px 10px 60px 10px;
 }
-.container{
-
-
-}
-
-
 
 .title {
     color: var(--color-hover);
@@ -44,7 +38,7 @@
     margin-top: 20px;
     height: 390px;
     overflow: hidden;
-    overflow-y: auto;   
+    overflow-y: auto;
     & .map-item {
         padding: 13px 10px;
         background-color: #f6f6f6;
